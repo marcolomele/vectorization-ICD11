@@ -8,7 +8,7 @@ This project aims to develop a vector database system for the International Clas
 
 The ICD database is the internationally recognized standard for classifying diseases, symptoms, and medical conditions. Every country has their own version of this database, but the global standard is maintained in English by the WHO. The database contains codes for all known diseases and medical conditions, providing a standardized way to classify and communicate about medical diagnoses.
 
-Currently, the ICD database is accessible through a REST API but lacks efficient natural language query capabilities and vector search functionality. This project aims to fill this gap by creating a vector representation of the ICD database to enable more intuitive searching based on patient-described symptoms.
+Currently, the ICD database is accessible through a REST API ([ICD API](https://icd.who.int/icdapi)) but lacks efficient natural language query capabilities and vector search functionality. This project aims to fill this gap by creating a vector representation of the ICD database to enable more intuitive searching based on patient-described symptoms.
 
 ### Project Goals
 
@@ -17,7 +17,7 @@ Currently, the ICD database is accessible through a REST API but lacks efficient
 3. Develop an API that allows natural language queries to find relevant ICD codes
 4. Link diagnosis codes to appropriate intervention codes
 5. Implement comprehensive testing for all components
-6. Document the system for future developers and integration with the Open Doctor project
+6. Document the system for future developers and integration with the [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec)
 
 ## Technical Architecture
 
@@ -25,7 +25,7 @@ The project will utilize the following technologies:
 
 - **Vector Database**: Using an embedding model to convert medical terms and descriptions into vector representations
 - **FastAPI**: For creating a REST API that serves vector search results
-- **ICD-11 API**: The WHO's official API for accessing ICD codes and descriptions
+- **ICD-11 API**: The WHO's official API for accessing ICD codes and descriptions ([ICD API Documentation](https://icd.who.int/docs/icd-api/APIDoc-Version2/))
 - **Testing Framework**: Pytest for comprehensive testing of all components
 - **GitHub Actions**: For continuous integration and test automation
 - **Docker**: For containerization and easy deployment
@@ -42,7 +42,7 @@ The project is divided among six students, each with specific responsibilities:
 
 2. **ICD Database Specialist** - [Student 2](./Student2_ICDSpecialist.md)
    - Studies the ICD-11 database structure
-   - Implements data extraction from ICD-11 API
+   - Implements data extraction from [ICD-11 API](https://icd.who.int/icdapi)
    - Documents the ICD code hierarchy and relationships
    - Estimated time: 35-40 hours
 
@@ -68,7 +68,7 @@ The project is divided among six students, each with specific responsibilities:
 6. **Documentation & Integration Specialist** - [Student 6](./Student6_Documentation.md)
    - Creates technical documentation
    - Prepares project report
-   - Ensures system can be integrated with Open Doctor
+   - Ensures system can be integrated with [Open Doctor](https://github.com/SEBK4C/OpenDoctor-Spec)
    - Develops user guides and examples
    - Estimated time: 30-35 hours
 
@@ -108,7 +108,7 @@ The project will be considered successful if:
 2. Appropriate medical interventions are linked to diagnoses
 3. The API responds to queries in under 1 second
 4. Test coverage exceeds 85%
-5. The system can be easily integrated with the Open Doctor project
+5. The system can be easily integrated with the [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec)
 
 ## Communication and Collaboration
 
@@ -126,6 +126,15 @@ Each team member should:
 3. Complete their assigned initial research tasks
 4. Participate in the first team meeting to discuss architecture and approach
 
+## Useful Resources
+
+- **ICD-11 Related Resources**:
+  - [ICD API Homepage](https://icd.who.int/icdapi)
+  - [ICD API Documentation v2.x](https://icd.who.int/docs/icd-api/APIDoc-Version2/)
+  - [ICD API Reference (Swagger)](https://icd.who.int/icdapi/docs2/APIDoc-Version2/)
+  - [Supported Classification Versions](https://icd.who.int/icdapi/docs2/SupportedClassifications/)
+  - [Clinical Table Search Service API for ICD-11](https://clinicaltables.nlm.nih.gov/apidoc/icd11_codes/v3/doc.html)
+
 ## Contact
 
-If you have questions about the Open Doctor project or need technical guidance, please contact SG. 
+If you have questions about the [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec) or need technical guidance, please contact SG. 

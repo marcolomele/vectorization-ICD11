@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project aims to develop a vector database and search system for the International Classification of Diseases (ICD-11) database, enabling natural language querying for medical conditions and appropriate interventions. This work is part of the larger Open Doctor project, which provides AI-powered medical assistance while maintaining patient privacy through local processing.
+This project aims to develop a vector database and search system for the International Classification of Diseases ([ICD-11](https://icd.who.int/en)) database, enabling natural language querying for medical conditions and appropriate interventions. This work is part of the larger [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec), which provides AI-powered medical assistance while maintaining patient privacy through local processing.
 
 ## Project Documents
 
@@ -39,15 +39,26 @@ The final project submission is due on May 25, 2025.
 - **FastAPI**: API framework
 - **Vector Databases**: FAISS, Pinecone, or similar
 - **Sentence Transformers**: For creating embeddings
-- **ICD-11 API**: WHO's International Classification of Diseases API
+- **ICD-11 API**: WHO's International Classification of Diseases API ([ICD API](https://icd.who.int/icdapi))
 - **GitHub**: For code storage and collaboration
 - **Docker**: For containerization and deployment
+
+## Key Resources
+
+- **ICD-11**:
+  - [ICD-11 Browser](https://icd.who.int/browse11/l-m/en)
+  - [ICD API Documentation](https://icd.who.int/docs/icd-api/APIDoc-Version2/)
+  - [ICD API Reference](https://icd.who.int/icdapi/docs2/APIDoc-Version2/)
+
+- **ICHI** (International Classification of Health Interventions):
+  - [ICHI Browser](https://mms.ichi.who.int/browse)
+  - [ICHI Documentation](https://mms.ichi.who.int/docs)
 
 ## Communication
 
 Team members should establish regular communication channels and meeting schedules. All code and documentation should be maintained in a shared GitHub repository to facilitate collaboration and version control.
 
-For questions about the Open Doctor project or technical guidance, contact SEBK4C.
+For questions about the [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec) or technical guidance, contact SEBK4C.
 
 ---
 
