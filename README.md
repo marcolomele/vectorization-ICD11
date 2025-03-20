@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project aims to develop a vector database and search system for the International Classification of Diseases ([ICD-11](https://icd.who.int/en)) database, enabling natural language querying for medical conditions and appropriate interventions. This work is part of the larger [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec), which provides AI-powered medical assistance while maintaining patient privacy through local processing.
+This project aims to develop a vector database and search system for the International Classification of Diseases ([ICD-11](https://icd.who.int/docs/icd-api/APIDoc-Version2/)) database, enabling natural language querying for medical conditions and appropriate interventions. This work is part of the larger [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec), which provides AI-powered medical assistance while maintaining patient privacy through local processing.
 
 ## Project Documents
 
@@ -39,20 +39,19 @@ The final project submission is due on May 25, 2025.
 - **FastAPI**: API framework
 - **Vector Databases**: FAISS, Pinecone, or similar
 - **Sentence Transformers**: For creating embeddings
-- **ICD-11 API**: WHO's International Classification of Diseases API ([ICD API](https://icd.who.int/icdapi))
+- **ICD-11 API**: WHO's International Classification of Diseases API ([Documentation](https://icd.who.int/docs/icd-api/APIDoc-Version2/), [API Reference](https://icd.who.int/icdapi/docs2/APIDoc-Version2/))
+- **ICHI Browser**: WHO's International Classification of Health Interventions ([Browser](https://icd.who.int/dev11/l-ichi/en))
 - **GitHub**: For code storage and collaboration
 - **Docker**: For containerization and deployment
 
-## Key Resources
+## Resources
 
-- **ICD-11**:
-  - [ICD-11 Browser](https://icd.who.int/browse11/l-m/en)
-  - [ICD API Documentation](https://icd.who.int/docs/icd-api/APIDoc-Version2/)
-  - [ICD API Reference](https://icd.who.int/icdapi/docs2/APIDoc-Version2/)
-
-- **ICHI** (International Classification of Health Interventions):
-  - [ICHI Browser](https://mms.ichi.who.int/browse)
-  - [ICHI Documentation](https://mms.ichi.who.int/docs)
+- [ICD API Homepage](https://icd.who.int/icdapi)
+- [ICD API Documentation v2.x](https://icd.who.int/docs/icd-api/APIDoc-Version2/)
+- [ICD API Reference (Swagger)](https://icd.who.int/icdapi/docs2/APIDoc-Version2/)
+- [Supported Classification Versions](https://icd.who.int/icdapi/docs2/SupportedClassifications/)
+- [Clinical Table Search Service API for ICD-11](https://clinicaltables.nlm.nih.gov/apidoc/icd11_codes/v3/doc.html)
+- [ICHI Browser](https://icd.who.int/dev11/l-ichi/en)
 
 ## Communication
 
