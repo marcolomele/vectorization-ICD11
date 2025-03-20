@@ -47,7 +47,7 @@ The final project submission is due on May 25, 2025.
 
 Team members should establish regular communication channels and meeting schedules. All code and documentation should be maintained in a shared GitHub repository to facilitate collaboration and version control.
 
-For questions about the Open Doctor project or technical guidance, contact SG.
+For questions about the Open Doctor project or technical guidance, contact SEBK4C.
 
 ---
 
