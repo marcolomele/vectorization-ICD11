@@ -19,7 +19,6 @@ This project aims to develop a vector database and search system for the Interna
 - **Vector Database Implementation** - [Task 3](Task3_VectorDB.md)
 - **LLM Integration** – [Task 4](Task4_LLMIntegration.md)
 - **Testing & Quality Assurance** – [Task 5 (Optional)](Task5_Testing.md)
-- **Testing & Quality Assurance** – [Task 5 (Optional)](Task5_Testing.md)
 
 ## Project Deadline
 
