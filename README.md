@@ -8,7 +8,7 @@ This project aims to develop a vector database and search system for the Interna
 
 ### Core Documentation
 
-- [Project Overview](./ProjectOverview.md) - Main project description, goals, and student roles
+- [Project Overview](./ProjectOverview.md) - Main project description, goals, and tasks.
 - [Technical Architecture](./TechnicalArchitecture.md) - Detailed technical design and system components
 - [Sample Code](./SampleCode.md) - Code examples to help get started with implementation
 
@@ -28,7 +28,7 @@ The final project submission is due on May 25, 2025.
 
 - **Python**: Primary programming language
 - **FastAPI**: API framework
-- **Vector Databases**: FAISS, Pinecone, or similar
+- **Vector Databases**: FAISS, Pinecone, Chroma DB, or similar
 - **Sentence Transformers**: For creating embeddings
 - **ICD-11 API**: WHO's International Classification of Diseases API ([Documentation](https://icd.who.int/docs/icd-api/APIDoc-Version2/), [API Reference](https://icd.who.int/icdapi/docs2/APIDoc-Version2/))
 - **ICHI Browser**: WHO's International Classification of Health Interventions ([Browser](https://icd.who.int/dev11/l-ichi/en))
