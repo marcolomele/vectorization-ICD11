@@ -32,48 +32,48 @@ See [technical architecture](TechnicalArchitecture.md) for full overview.
 
 ### Nice-to-haves
 The project will attempt to include the following technical components. However, these are of secondary importance, and might be deliverared at a later date if time and resources allow it.
-- **Testing Framework**: Pytest for comprehensive testing of all components
-- **GitHub Actions**: For continuous integration and test automation
-- **Docker**: For containerization and easy deployment
+- **Testing Framework**: Pytest for comprehensive testing of all components.
+- **GitHub Actions**: For continuous integration and test automation.
+- **Docker**: For containerization and easy deployment.
 
 ## Project Tasks
 
-The following tasks need to be completed for the project:
+The following tasks need to be completed for the project. Tasks 1 to 4 will be prioritized because they relate to the primary goal of the project; they will have to be completed by the project deadline. Tasks 5 and 6 will be considered thorughout the project, but they will not be the primary focus. Nonetheless, given the learning potential, the team will seriously consider completing these tasks after the project deadline to facilitate integration into the Open Doctor project.
 
-1. **Project Management & API Design** - [Task 1](Task1_ProjectManager.md)
+1. **Project Management & API Design** - Primary – [Detailed info](Task1_ProjectManager.md)
    - Coordinate team activities and track deliverables
    - Design API endpoints and response formats
    - Integrate individual components
    - Manage project timeline and milestones
 
-2. **ICD Database Integration** - [Task 2](Task2_ICD.md)
+2. **ICD Database Integration** - Primary - [Detailed info](Task2_ICD.md)
    - Study and document ICD-11 database structure
    - Implement data extraction from ICD-11 API
    - Document ICD code hierarchy and relationships
    - Create data validation and cleaning pipelines
 
-3. **Vector Database Implementation** - [Task 3](Task3_VectorDB.md)
+3. **Vector Database Implementation** - Primary - [Detailed info](Task3_VectorDB.md)
    - Research and select vector database technology
    - Implement vector database solution
    - Create embedding pipeline for medical terms
    - Optimize vector search algorithms
    - Implement caching and performance optimizations
 
-4. **LLM Integration** – [Task 4](Task4_LLMIntegration.md)
+4. **LLM Integration** - Primary – [Detailed info](Task4_LLMIntegration.md)
    - Research and select appropriate LLM solution
    - Implement LLM integration with vector database
    - Create conversational interface
    - Optimize prompt engineering for medical context
    - Implement response formatting and validation
 
-5. **Testing & Quality Assurance** – [Task 5 (Optional)](Task5_Testing.md)
+5. **Testing & Quality Assurance** - Primary – [Detailed info](Task5_Testing.md)
    - Create comprehensive test cases
    - Implement automated testing pipeline
    - Ensure deterministic test results
    - Document test coverage and results
    - Perform performance testing and optimization
 
-6. **Documentation & Integration** – [Task 6 (Optional)](Task6_Documentation.md)
+6. **Documentation & Integration** - Primary – [Detailed info](Task6_Documentation.md)
    - Create technical documentation
    - Prepare project report
    - Ensure system can be integrated with Open Doctor

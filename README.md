@@ -13,12 +13,14 @@ This project aims to develop a vector database and search system for the Interna
 - [Sample Code](./SampleCode.md) - Code examples to help get started with implementation
 
 ### Task Documents
+Tasks 1 to 4 will be prioritized because they relate to the primary goal of the project; they will have to be completed by the project deadline. Tasks 5 and 6 will be considered thorughout the project, but they will not be the primary focus. Nonetheless, given the learning potential, the team will seriously consider completing these tasks after the project deadline to facilitate integration into the Open Doctor project.
 
-- **Project Management & API Design** - [Task 1](Task1_ProjectManager.md)
-- **ICD Database Integration** - [Task 2](Task2_ICD.md)
-- **Vector Database Implementation** - [Task 3](Task3_VectorDB.md)
-- **LLM Integration** – [Task 4](Task4_LLMIntegration.md)
-- **Testing & Quality Assurance** – [Task 5 (Optional)](Task5_Testing.md)
+- **Project Management & API Design** - [Task 1 (Primary)](Task1_ProjectManager.md)
+- **ICD Database Integration** - [Task 2 (Primary)](Task2_ICD.md)
+- **Vector Database Implementation** - [Task 3 (Primary)](Task3_VectorDB.md)
+- **LLM Integration** – [Task 4 (Primary)](Task4_LLMIntegration.md)
+- **Testing & Quality Assurance** – [Task 5 (Secondary)](Task5_Testing.md)
+- **Documntation** – [Task 6 (Secondary)](Task5_Testing.md)
 
 ## Project Deadline
 
@@ -48,7 +50,7 @@ The final project submission is due on May 25, 2025.
 
 Team members should establish regular communication channels and meeting schedules. All code and documentation should be maintained in a shared GitHub repository to facilitate collaboration and version control.
 
-For questions about the [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec) or technical guidance, contact SEBK4C.
+For questions about the [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec) or technical guidance, contact [SEBK4C](https://github.com/SEBK4C).
 
 ---
 
