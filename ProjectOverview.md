@@ -66,14 +66,14 @@ The following tasks need to be completed for the project. Tasks 1 to 4 will be p
    - Optimize prompt engineering for medical context
    - Implement response formatting and validation
 
-5. **Testing & Quality Assurance** - Primary – [Detailed info](Task5_Testing.md)
+5. **Testing & Quality Assurance** - Secondary – [Detailed info](Task5_Testing.md)
    - Create comprehensive test cases
    - Implement automated testing pipeline
    - Ensure deterministic test results
    - Document test coverage and results
    - Perform performance testing and optimization
 
-6. **Documentation & Integration** - Primary – [Detailed info](Task6_Documentation.md)
+6. **Documentation & Integration** - Secondary – [Detailed info](Task6_Documentation.md)
    - Create technical documentation
    - Prepare project report
    - Ensure system can be integrated with Open Doctor
