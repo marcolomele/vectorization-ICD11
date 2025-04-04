@@ -8,19 +8,19 @@ This project aims to develop a vector database and search system for the Interna
 
 ### Core Documentation
 
-- [Project Overview](./ProjectOverview.md) - Main project description, goals, and tasks.
-- [Technical Architecture](./TechnicalArchitecture.md) - Detailed technical design and system components
-- [Sample Code](./SampleCode.md) - Code examples to help get started with implementation
+- [Project Overview](project-info/ProjectOverview.md) - Main project description, goals, and tasks.
+- [Technical Architecture](project-info/TechnicalArchitecture.md) - Detailed technical design and system components
+- [Sample Code](project-info/SampleCode.md) - Code examples to help get started with implementation
 
 ### Task Documents
 Tasks 1 to 4 will be prioritized because they relate to the primary goal of the project; they will have to be completed by the project deadline. Tasks 5 and 6 will be considered thorughout the project, but they will not be the primary focus. Nonetheless, given the learning potential, the team will seriously consider completing these tasks after the project deadline to facilitate integration into the Open Doctor project.
 
-- **Project Management & API Design** - [Task 1 (Primary)](Task1_ProjectManager.md)
-- **ICD Database Integration** - [Task 2 (Primary)](Task2_ICD.md)
-- **Vector Database Implementation** - [Task 3 (Primary)](Task3_VectorDB.md)
-- **LLM Integration** – [Task 4 (Primary)](Task4_LLMIntegration.md)
-- **Testing & Quality Assurance** – [Task 5 (Secondary)](Task5_Testing.md)
-- **Documntation** – [Task 6 (Secondary)](Task5_Testing.md)
+- **Project Management & API Design** - [Task 1 (Primary)](project-info/Task1_ProjectManager.md)
+- **ICD Database Integration** - [Task 2 (Primary)](project-info/Task2_ICD.md)
+- **Vector Database Implementation** - [Task 3 (Primary)](project-info/Task3_VectorDB.md)
+- **LLM Integration** – [Task 4 (Primary)](project-info/Task4_LLMIntegration.md)
+- **Testing & Quality Assurance** – [Task 5 (Secondary)](project-info/Task5_Testing.md)
+- **Documntation** – [Task 6 (Secondary)](project-info/Task5_Testing.md)
 
 ## Project Deadline
 
