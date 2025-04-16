@@ -14,8 +14,6 @@ ROOT_ENTITY_URI = 'https://id.who.int/icd/release/11/2023-01/mms'
 MMS_BASE_URI = 'https://id.who.int/icd/release/11/2023-01/mms/'
 
 SLEEP_TIME = 0.2  # To avoid rate limiting
-MAX_CHILDREN = 1000
-
 # ===================================
 
 def get_access_token():
@@ -32,7 +30,7 @@ def get_access_token():
     return token_data['access_token']
 
 def crawl_icd11():
-    print("Getting access token...")
+    print("\nGetting access token...\n")
     token = get_access_token()
 
     headers = {
@@ -62,14 +60,14 @@ def crawl_icd11():
             code = data.get('code', "")
             print(f"- {code} {title} (ID: {entity_id})")
     
-    EXTRACT_CHAPTER_NUMBER = int(input("Select the chapter number to crawl: "))
+    EXTRACT_CHAPTER_NUMBER = int(input("\nSelect the chapter number to crawl: "))
     OUTPUT_DIR = f'crawling_results/icd11_crawled_entities_iterative_CH_{str(EXTRACT_CHAPTER_NUMBER)}'
     if not os.path.exists(OUTPUT_DIR):
         os.makedirs(OUTPUT_DIR)
 
     user_input = input("\nConfirm crawling process? (yes/no): ").lower().strip()
     if user_input != 'yes':
-        print("Crawling cancelled by user.")
+        print("\nCrawling cancelled by user.")
         return
 
     # Initialize queue with root IDs
@@ -79,7 +77,7 @@ def crawl_icd11():
     total_processed = 0
     
     # Iterative BFS traversal
-    with tqdm(desc="Fetching entities", unit=" entity") as pbar:
+    with tqdm(desc="Fetching entities", unit=" entities") as pbar:
         while queue:
             entity_id = queue.popleft()
             
@@ -97,7 +95,7 @@ def crawl_icd11():
                 with open(os.path.join(OUTPUT_DIR, f"{entity_id}.json"), 'w', encoding='utf-8') as f:
                     json.dump(data, f, ensure_ascii=False, indent=2)
                 
-                child_uris = data.get('child', [])[:MAX_CHILDREN]
+                child_uris = data.get('child', [])
                 for child_uri in child_uris:
                     child_id = child_uri.split("/")[-1]
                     if child_id not in visited:
