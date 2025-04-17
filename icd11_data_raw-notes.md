@@ -1,5 +1,5 @@
 # ICD-11 CSV Columns Description
-Check [ICDparser.ipynb](ICDparser.ipynb) for the original columns.
+Check [icd11_data_raw.csv](icd11_data_raw.csv) for the original columns.
 
 ## Core Fields
 - `id`: Unique identifier for the ICD-11 entity
