@@ -3,7 +3,6 @@ import json
 import time
 import requests
 import collections
-import pandas as pd
 from tqdm import tqdm
 
 # ========== CONFIGURATION ==========
@@ -13,7 +12,7 @@ TOKEN_ENDPOINT = 'https://icdaccessmanagement.who.int/connect/token'
 ROOT_ENTITY_URI = 'https://id.who.int/icd/release/11/2023-01/mms'
 MMS_BASE_URI = 'https://id.who.int/icd/release/11/2023-01/mms/'
 
-SLEEP_TIME = 0.2  # To avoid rate limiting
+SLEEP_TIME = 0.01  # To avoid rate limiting
 # ===================================
 
 def get_access_token():
@@ -30,7 +29,7 @@ def get_access_token():
     return token_data['access_token']
 
 def crawl_icd11():
-    print("\nGetting access token...\n")
+    print("\nGetting access token...")
     token = get_access_token()
 
     headers = {
@@ -51,68 +50,76 @@ def crawl_icd11():
         json.dump(root_ids, f)
 
     # Fetch and display chapter titles
-    for entity_id in root_ids:
-        uri = f'{MMS_BASE_URI}{entity_id}'
-        response = requests.get(uri, headers=headers)
-        if response.status_code == 200:
-            data = response.json()
-            title = data.get('title', {}).get('@value', 'Unknown Title')
-            code = data.get('code', "")
-            print(f"- {code} {title} (ID: {entity_id})")
+    # for entity_id in root_ids:
+    #     uri = f'{MMS_BASE_URI}{entity_id}'
+    #     response = requests.get(uri, headers=headers)
+    #     if response.status_code == 200:
+    #         data = response.json()
+    #         title = data.get('title', {}).get('@value', 'Unknown Title')
+    #         code = data.get('code', "")
+    #         print(f"- {code} {title} (ID: {entity_id})")
     
-    EXTRACT_CHAPTER_NUMBER = int(input("\nSelect the chapter number to crawl: "))
-    OUTPUT_DIR = f'crawling_results/icd11_crawled_entities_iterative_CH_{str(EXTRACT_CHAPTER_NUMBER)}'
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
+    for i in range(2):
+        if i == 0:
+            EXTRACT_CHAPTER_NUMBER = 27
+            OUTPUT_DIR = f'crawling_results/icd11_crawled_entities_iterative_CH_V'
+        else:
+            EXTRACT_CHAPTER_NUMBER = 28
+            OUTPUT_DIR = f'crawling_results/icd11_crawled_entities_iterative_CH_X'
 
-    user_input = input("\nConfirm crawling process? (yes/no): ").lower().strip()
-    if user_input != 'yes':
-        print("\nCrawling cancelled by user.")
-        return
+        print(f"\nCrawling CHAPTER {EXTRACT_CHAPTER_NUMBER}...")
+        # OUTPUT_DIR = f'crawling_results/icd11_crawled_entities_iterative_CH_{str(EXTRACT_CHAPTER_NUMBER)}'
+        if not os.path.exists(OUTPUT_DIR):
+            os.makedirs(OUTPUT_DIR)
 
-    # Initialize queue with root IDs
-    chapter_to_process = root_ids[EXTRACT_CHAPTER_NUMBER-1]
-    queue = collections.deque([chapter_to_process])
-    visited = set([chapter_to_process])
-    total_processed = 0
-    
-    # Iterative BFS traversal
-    with tqdm(desc="Fetching entities", unit=" entities") as pbar:
-        while queue:
-            entity_id = queue.popleft()
-            
-            # Fetch entity data
-            uri = f'{MMS_BASE_URI}{entity_id}'
-            try:
-                response = requests.get(uri, headers=headers)
-                if response.status_code != 200:
-                    print(f"!!! Failed to fetch {uri}")
-                    continue
+        # user_input = input("\nConfirm crawling process? (yes/no): ").lower().strip()
+        # if user_input != 'yes':
+        #     print("\nCrawling cancelled by user.")
+        #     return
+
+        # Initialize queue with root IDs
+        chapter_to_process = root_ids[EXTRACT_CHAPTER_NUMBER-1]
+        queue = collections.deque([chapter_to_process])
+        visited = set([chapter_to_process])
+        total_processed = 0
+        
+        # Iterative BFS traversal
+        with tqdm(desc="Fetching entities", unit=" entities") as pbar:
+            while queue:
+                entity_id = queue.popleft()
                 
-                data = response.json()
-                
-                # Save entity data
-                with open(os.path.join(OUTPUT_DIR, f"{entity_id}.json"), 'w', encoding='utf-8') as f:
-                    json.dump(data, f, ensure_ascii=False, indent=2)
-                
-                child_uris = data.get('child', [])
-                for child_uri in child_uris:
-                    child_id = child_uri.split("/")[-1]
-                    if child_id not in visited:
-                        queue.append(child_id)
-                        visited.add(child_id)
-                
-                # Update progress
-                total_processed += 1
-                pbar.update(1)
-                
-                # Sleep to avoid rate limiting
-                time.sleep(SLEEP_TIME)
-                
-            except Exception as e:
-                print(f"!!! Error processing {uri}: {str(e)}")
-    
-    print(f"\nFINISHED. {total_processed} MMS linearized entities saved to folder '{OUTPUT_DIR}'")
+                # Fetch entity data
+                uri = f'{MMS_BASE_URI}{entity_id}'
+                try:
+                    response = requests.get(uri, headers=headers)
+                    if response.status_code != 200:
+                        print(f"\n!!! Failed to fetch {uri}")
+                        continue
+                    
+                    data = response.json()
+                    
+                    # Save entity data
+                    with open(os.path.join(OUTPUT_DIR, f"{entity_id}.json"), 'w', encoding='utf-8') as f:
+                        json.dump(data, f, ensure_ascii=False, indent=2)
+                    
+                    child_uris = data.get('child', [])
+                    for child_uri in child_uris:
+                        child_id = child_uri.split("/")[-1]
+                        if child_id not in visited:
+                            queue.append(child_id)
+                            visited.add(child_id)
+                    
+                    # Update progress
+                    total_processed += 1
+                    pbar.update(1)
+                    
+                    # Sleep to avoid rate limiting
+                    time.sleep(SLEEP_TIME)
+                    
+                except Exception as e:
+                    print(f"!!! Error processing {uri}: {str(e)}")
+        
+        print(f"\n FINISHED. {total_processed} MMS linearized entities saved to folder '{OUTPUT_DIR}\n\n")
 
 def main():
     crawl_icd11()
