@@ -1,1 +1,1 @@
-This folder contain the embeddings computed for all BERTs models, including PubMedBERT, with just one notebook
+This folder contain the embeddings computed for all BERTs models, including PubMedBERT, with just one notebook. This notebook creates the embeddings for all the BERTs models and then tries to evaluate them. So far, optimization is required on evaluation tasks or additional computational power. I think that a clever way is to separate the evaluation in another file and test on the generated and saved embeddings
