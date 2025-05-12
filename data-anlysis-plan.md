@@ -1,15 +1,19 @@
 # Preprocessing
-- variable setting
-- check outliers with lengths -> fix top two entries
-- check for nan value distribution
+- variable setting ✅
+- check outliers with lengths -> fix top two entries ✅
+- check for nan value distribution ✅
 
 Quality assurance:
-- gen descriptions longer
-- gen description is complete: if cover overview, causes, symptoms, transmission, diagnosis, treatment.
+- gen descriptions longer ✅
+- gen description is complete: if cover overview, causes, symptoms, transmission, diagnosis, treatment. ✅
 
-Problem: many definitions incomplete, even more definitions missing.
+Problem: many definitions incomplete, even more definitions missing. ✅
 
-Solution: Llama3-OpenBio-70B.
+Solution 1: Text concatenation. ✅
+
+Problem: low scores and TF-IDF wins. ✅
+
+Solution 2: Llama3-OpenBio-70B. ✅
 
 # LLM Data generation
 Describe procedure.
