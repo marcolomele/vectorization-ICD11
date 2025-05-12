@@ -3,7 +3,12 @@ secret.txt
 icd11_mms_crawled_entities
 icd11_mms_crawled_entities_iterative
 icd11_mms_crawled_entities_recursive
-crawling_results
+crawling_results_23
+crawling_results_25
 Vectorization
 icd11_data500csv.txt
 Untitled-1.ipynb
+.env
+*.pdf
+*.rtf
+temp_descriptions_progress.csv
