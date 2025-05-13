@@ -12,3 +12,4 @@ Untitled-1.ipynb
 *.pdf
 *.rtf
 temp_descriptions_progress.csv
+__pycache__

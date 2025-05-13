@@ -24,8 +24,8 @@ Quality assurance:
 
 # Comparative Data Analysis 
 Goal: understand if LLM added information for embeddings.
-- processing steps specific for analysis: lowercase, punctuation, lemmatisation. apply to both.
-- information density: length (characters, words, sentences), vocabulary richness, complexity.
+- processing steps specific for analysis: lowercase, punctuation, lemmatisation. apply to both. ✅
+- information density: length (characters, words, sentences), vocabulary richness, complexity, POS.
 – identify information novely with n-gram overlap and BLUE/ROUGE scores 
 
 If so, how does this information look like?
