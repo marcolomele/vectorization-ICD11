@@ -25,7 +25,7 @@ Quality assurance:
 # Comparative Data Analysis 
 Goal: understand if LLM added information for embeddings.
 - processing steps specific for analysis: lowercase, punctuation, lemmatisation. apply to both. ✅
-- information density: length (characters, words, sentences), vocabulary richness, complexity, POS.
+- information density: length (characters, words, sentences), vocabulary richness, complexity, POS. ✅
 – identify information novely with n-gram overlap and BLUE/ROUGE scores 
 
 If so, how does this information look like?
@@ -47,5 +47,5 @@ Explore both original and generated descriptions, across categories.
 Note: this section is not directly related to NLP, hence keep minimal. 
 
 # Preparing for Modelling
-- concatenate intelligently new information from other columns.
-- remove other columns and give essential data to modelling team.
+- concatenate intelligently new information from other columns. ✅
+- remove other columns and give essential data to modelling team. ✅
