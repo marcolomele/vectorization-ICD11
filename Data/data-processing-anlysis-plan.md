@@ -34,7 +34,7 @@ If so, how does this information look like?
 - domain specific EDA:
     - Semantic Field Analysis: What semantic fields (pain, inflammation, degeneration) dominate certain disease categories versus others? ✅
     - Causal Language Analysis: How are cause-effect relationships described? Map linguistic markers that indicate etiology (due to, secondary to, resulting from). ✅
-    - Body Parts
+    - Body Parts ✅
 
 View across description sources, across categories.
 
