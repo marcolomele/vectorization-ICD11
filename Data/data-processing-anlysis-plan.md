@@ -26,13 +26,15 @@ Quality assurance:
 Goal: understand if LLM added information for embeddings.
 - processing steps specific for analysis: lowercase, punctuation, lemmatisation. apply to both. ✅
 - information density: length (characters, words, sentences), vocabulary richness, complexity, POS. ✅
-– identify information novely with n-gram overlap and BLUE/ROUGE scores 
+– identify information novely with n-gram overlap and BLUE/ROUGE scores ✅
 
 If so, how does this information look like?
-– name entity recognition
 - topic modelling
-- sentiment
-- POS tagging
+- sentiment ✅
+- domain specific EDA:
+    - Semantic Field Analysis: What semantic fields (pain, inflammation, degeneration) dominate certain disease categories versus others? ✅
+    - Causal Language Analysis: How are cause-effect relationships described? Map linguistic markers that indicate etiology (due to, secondary to, resulting from). ✅
+    - Body Parts
 
 View across description sources, across categories.
 
