@@ -13,3 +13,4 @@ Untitled-1.ipynb
 *.rtf
 temp_descriptions_progress.csv
 __pycache__
+icd11_gatortron_vectors_no_coma.csv
