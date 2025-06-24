@@ -9,8 +9,8 @@ Vectorization
 icd11_data500csv.txt
 Untitled-1.ipynb
 .env
-*.pdf
 *.rtf
 temp_descriptions_progress.csv
 __pycache__
 icd11_gatortron_vectors_no_coma.csv
+bin/

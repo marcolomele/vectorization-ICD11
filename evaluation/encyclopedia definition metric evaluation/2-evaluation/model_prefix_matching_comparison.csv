@@ -1,0 +1,8 @@
+,% Match First 4 Symbols,% Match First 3 Symbols,% Match First 2 Symbols,% Match First Symbol,% No First Symbol Matches
+tfidf,1.06,8.47,15.61,31.48,68.52
+fasttext,0.79,2.12,4.23,16.67,83.33
+bert,51.85,64.81,72.49,83.07,16.93
+biobert,66.14,77.51,82.01,89.95,10.05
+bioclinicalbert,54.5,65.34,70.9,82.54,17.46
+pubmedbert,75.13,83.33,86.24,92.33,7.67
+gatortron,2.91,11.11,26.19,50.79,49.21
