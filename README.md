@@ -1,57 +1,112 @@
 # ICD Vectorization for Open Doctor - NLP Student Project
 
-## Project Overview
+This project focuses on developing a vector database and search system for the International Classification of Diseases ([ICD-11](https://icd.who.int/docs/icd-api/APIDoc-Version2/)) database. The augment ICD-11's descriptions with hierarchical information form its structure, as well as generated descriptions, for which we leverage Llama3-OpenBioLLM, an open-source model leading on bio-medical tasks. We then test 7 different embeddings modules and comprare them across a wide range of tasks, obtaining results that match previous research, in particular [ICD2Vec: Mathematical representation of diseases](https://www.sciencedirect.com/science/article/pii/S1532046423000825).
 
-This project aims to develop a vector database and search system for the International Classification of Diseases ([ICD-11](https://icd.who.int/docs/icd-api/APIDoc-Version2/)) database, enabling natural language querying for medical conditions and appropriate interventions. This work is part of the larger [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec), which provides AI-powered medical assistance while maintaining patient privacy through local processing.
+The broader context is to integrate with [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec) to empower translation from natural language descriptions of medical symptoms into standardized ICD codes, and then suggest relevant medical interventions, ultimately contributing to the democratization of medical knowledge while prioritizing patient privacy through local processing.
 
-## Project Documents
+## Repository Structure 📂
 
-### Core Documentation
+```
+icd-vectorization-for-open-doctor/
+├── data/                 # Raw, processed, and analyzed datasets
+│   ├── 1-extraction/     # Scripts for data extraction
+│   ├── 2-processing/     # Notebooks for data cleaning and generation
+│   └── 3-analysis/       # Notebooks for data analysis and visualizations
+├── embeddings/           # Embeddings, analysis scripts, and visualizations
+│   ├── embedding_analysis.py
+│   ├── embeddings visuals/ # Visualizations related to embeddings
+│   └── resulting ICD-11 csv embeddings/ # Stored ICD-11 embeddings
+├── evaluation/           # Model evaluation notebooks and results
+│   ├── comorbidity score evaluation/
+│   ├── encyclopedia definition metric evaluation/
+│   ├── non-medical-terms/
+│   ├── symptoms benchmark/
+│   └── visualizations/   # Visualizations of evaluation results
+├── misc./                # Miscellaneous scripts and documentation
+├── models/               # Notebooks for training various embedding models
+├── report-presentation/  # Project reports and presentations
+├── requirements.txt      # Python dependencies
+├── LICENSE               # Project license
+└── README.md             # Project overview and instructions
+```
 
-- [Project Overview](project-info/ProjectOverview.md) - Main project description, goals, and tasks.
-- [Technical Architecture](project-info/TechnicalArchitecture.md) - Detailed technical design and system components
-- [Sample Code](project-info/SampleCode.md) - Code examples to help get started with implementation
+## Getting Started 🚀
 
-### Task Documents
-Tasks 1 to 4 will be prioritized because they relate to the primary goal of the project; they will have to be completed by the project deadline. Tasks 5 and 6 will be considered thorughout the project, but they will not be the primary focus. Nonetheless, given the learning potential, the team will seriously consider completing these tasks after the project deadline to facilitate integration into the Open Doctor project.
+To set up and run this project locally, follow these steps:
 
-- **Project Management & API Design** - [Task 1 (Primary)](project-info/Task1_ProjectManager.md)
-- **ICD Database Integration** - [Task 2 (Primary)](project-info/Task2_ICD.md)
-- **Vector Database Implementation** - [Task 3 (Primary)](project-info/Task3_VectorDB.md)
-- **LLM Integration** – [Task 4 (Primary)](project-info/Task4_LLMIntegration.md)
-- **Testing & Quality Assurance** – [Task 5 (Secondary)](project-info/Task5_Testing.md)
-- **Documntation** – [Task 6 (Secondary)](project-info/Task5_Testing.md)
+### 1. Clone the repository
 
-## Project Deadline
+```bash
+git clone https://github.com/yourusername/vector-database-ICD.git
+cd vector-database-ICD
+```
 
-The final project submission is due on May 25, 2025.
+### 2. Set up the environment
 
-## Core Technologies
+It is recommended to use a virtual environment:
 
-- **Python**: Primary programming language
-- **FastAPI**: API framework
-- **Vector Databases**: FAISS, Pinecone, Chroma DB, or similar
-- **Sentence Transformers**: For creating embeddings
-- **ICD-11 API**: WHO's International Classification of Diseases API ([Documentation](https://icd.who.int/docs/icd-api/APIDoc-Version2/), [API Reference](https://icd.who.int/icdapi/docs2/APIDoc-Version2/))
-- **ICHI Browser**: WHO's International Classification of Health Interventions ([Browser](https://icd.who.int/dev11/l-ichi/en))
-- **GitHub**: For code storage and collaboration
-- **Docker**: For containerization and deployment
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-## Resources
+### 3. Install dependencies
 
-- [ICD API Homepage](https://icd.who.int/icdapi)
-- [ICD API Documentation v2.x](https://icd.who.int/docs/icd-api/APIDoc-Version2/)
-- [ICD API Reference (Swagger)](https://icd.who.int/icdapi/docs2/APIDoc-Version2/)
-- [Supported Classification Versions](https://icd.who.int/icdapi/docs2/SupportedClassifications/)
-- [Clinical Table Search Service API for ICD-11](https://clinicaltables.nlm.nih.gov/apidoc/icd11_codes/v3/doc.html)
-- [ICHI Browser](https://icd.who.int/dev11/l-ichi/en)
+Install all necessary Python packages:
 
-## Communication
+```bash
+pip install -r requirements.txt
+```
 
-Team members should establish regular communication channels and meeting schedules. All code and documentation should be maintained in a shared GitHub repository to facilitate collaboration and version control.
+## Data 💽
 
-For questions about the [Open Doctor project](https://github.com/SEBK4C/OpenDoctor-Spec) or technical guidance, contact [SEBK4C](https://github.com/SEBK4C).
+*   **data/1-extraction/**: Contains scripts like `ICDparser.py` for extracting raw ICD-11 data via a REST API. 
+*   **data/2-processing/**: Includes notebooks such as `data-processing.ipynb` and `generating-descriptions.ipynb` for cleaning and enriching the data.
+*   **data/3-analysis/**: Houses notebooks for in-depth data analysis and visualizations, like `data-analysis+hierarchical.ipynb`.
 
----
+Processed and vectorized data, including various ICD-11 embeddings, are stored in `embeddings/resulting ICD-11 csv embeddings/`.
 
-This project will enable the Open Doctor system to translate natural language descriptions of medical symptoms into standardized ICD codes and suggest appropriate medical interventions, forming a critical component of the broader goal to democratize access to medical knowledge while maintaining patient privacy. 
+## Modeling 🧪
+
+Model training and embedding generation are primarily handled within the `models/` directory. This includes notebooks for the seven different embedding approaches:
+
+*   `berts_func_model.ipynb`: For BERT-based models (BERT, BioBERT, BioClinicalBERT, PubMedBERT).
+*   `fasttext_model.ipynb`: For FastText embeddings.
+*   `gatortron_model.ipynb`: For GatorTron embeddings.
+*   `tfidf_model.ipynb`: For TF-IDF vectorization.
+
+## Evaluation 📊
+
+Comprehensive evaluation of the embedding models is conducted in the `evaluation/` directory, covering various benchmarks:
+
+*   **Comorbidity Score Evaluation**: Notebooks and data for benchmarking using comorbidity scores.
+*   **Encyclopedia Definition Metric Evaluation**: For assessing model performance against encyclopedia definitions.
+*   **Non-Medical Terms Evaluation**: To analyze model robustness with non-medical prompts.
+*   **Symptoms Benchmark**: For evaluating models based on symptom-based queries.
+
+Visualizations of evaluation results are available in `evaluation/visualizations/` and `embeddings/embeddings visuals/`.
+
+## Core Technologies 💻
+
+This project leverages a range of technologies:
+
+*   **Python**: Primary programming language.
+*   **FastAPI**: For building the API framework.
+*   **HuggingFace & Nebus AI**: For connecting to and running Llama3-OpenBioLLM.
+*   **Sentence Transformers**: For generating high-quality text embeddings.
+*   **ICD-11 API**: WHO's International Classification of Diseases API ([Documentation](https://icd.who.int/docs/icd-api/APIDoc-Version2/), [API Reference](https://icd.who.int/icdapi/docs2/APIDoc-Version2/)).
+*   **ICHI Browser**: WHO's International Classification of Health Interventions ([Browser](https://icd.who.int/dev11/l-ichi/en)).
+
+## External Resources 🔗
+
+*   [ICD API Homepage](https://icd.who.int/icdapi)
+*   [ICD API Documentation v2.x](https://icd.who.int/docs/icd-api/APIDoc-Version2/)
+*   [ICD API Reference (Swagger)](https://icd.who.int/icdapi/docs2/APIDoc-Version2/)
+*   [Supported Classification Versions](https://icd.who.int/icdapi/docs2/SupportedClassifications/)
+*   [Clinical Table Search Service API for ICD-11](https://clinicaltables.nlm.nih.gov/apidoc/icd11_codes/v3/doc.html)
+*   [NLTK Documentation](https://www.nltk.org/)
+*   [scikit-learn Documentation](https://scikit-learn.org/)
+
+## License 🔑
+
+This project is licensed under the terms of the MIT License. See the `LICENSE` file for more details.
