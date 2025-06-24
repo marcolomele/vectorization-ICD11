@@ -1,4 +1,4 @@
-# ICD Vectorization for Open Doctor - NLP Student Project
+# Semantic Vectorization of Hierarchical Medical Knowledge via LLMs
 
 This project focuses on developing a vector database and search system for the International Classification of Diseases ([ICD-11](https://icd.who.int/docs/icd-api/APIDoc-Version2/)) database. The augment ICD-11's descriptions with hierarchical information form its structure, as well as generated descriptions, for which we leverage Llama3-OpenBioLLM, an open-source model leading on bio-medical tasks. We then test 7 different embeddings modules and comprare them across a wide range of tasks, obtaining results that match previous research, in particular [ICD2Vec: Mathematical representation of diseases](https://www.sciencedirect.com/science/article/pii/S1532046423000825).
 
