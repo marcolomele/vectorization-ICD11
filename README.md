@@ -86,6 +86,13 @@ Comprehensive evaluation of the embedding models is conducted in the `evaluation
 
 Visualizations of evaluation results are available in `evaluation/visualizations/` and `embeddings/embeddings visuals/`.
 
+## Contributors 🤝
+* [Giovanni Mantovani](https://www.linkedin.com/in/giovanni-mantovani/)
+* [Ilia Koldyshev](https://www.linkedin.com/in/ilia-koldyshev-b4b837287/)
+* [Gleb Legotkin](https://www.linkedin.com/in/gleb-legotkin/)
+* [Giorgio Caretti](https://www.linkedin.com/in/giorgio-filippo-caretti/)
+* [Leonardo Ruzzante](https://www.linkedin.com/in/leonardo-ruzzante/)
+
 ## Core Technologies 💻
 
 This project leverages a range of technologies:
