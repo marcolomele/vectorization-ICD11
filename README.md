@@ -199,12 +199,14 @@ This work builds upon and extends several key research areas:
 **Biomedical Evaluation**: Introduces comprehensive evaluation frameworks specifically designed for medical embedding assessment across multiple clinical tasks.
 
 ## Contributors 🤝
-* [Giovanni Mantovani](https://www.linkedin.com/in/giovanni-mantovani/)
+* [Giorgio Caretti](https://www.linkedin.com/in/giorgio-filippo-caretti/)
 * [Ilia Koldyshev](https://www.linkedin.com/in/ilia-koldyshev-b4b837287/)
 * [Gleb Legotkin](https://www.linkedin.com/in/gleb-legotkin/)
-* [Giorgio Caretti](https://www.linkedin.com/in/giorgio-filippo-caretti/)
-* [Leonardo Ruzzante](https://www.linkedin.com/in/leonardo-ruzzante/)
 * [Marco Lomele](https://www.linkedin.com/in/marco-lomele/)
+* [Giovanni Mantovani](https://www.linkedin.com/in/giovanni-mantovani/)
+* [Leonardo Ruzzante](https://www.linkedin.com/in/leonardo-ruzzante/)
+
+Note: ordering is alphabetical on surname; contribution was equal across all team members. 
 
 ## 📄 Citation
 
