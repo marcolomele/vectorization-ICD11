@@ -92,6 +92,7 @@ Visualizations of evaluation results are available in `evaluation/visualizations
 * [Gleb Legotkin](https://www.linkedin.com/in/gleb-legotkin/)
 * [Giorgio Caretti](https://www.linkedin.com/in/giorgio-filippo-caretti/)
 * [Leonardo Ruzzante](https://www.linkedin.com/in/leonardo-ruzzante/)
+* [Marco Lomele](https://www.linkedin.com/in/marco-lomele/)
 
 ## Core Technologies 💻
 
