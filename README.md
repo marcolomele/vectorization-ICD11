@@ -26,11 +26,7 @@ The 11th Revision of the International Classification of Diseases (ICD-11) serve
 ## 🧠 Methodology
 
 ### Description Generation
-We employ **Llama3-OpenBioLLM-70B**, chosen for its superior performance over proprietary alternatives like Med-PaLM 2 and GPT-4 on biomedical benchmarks. Our structured prompt ensures comprehensive coverage:
-
-```
-Overview → Causes → Symptoms → Transmission → Diagnosis
-```
+We employ **Llama3-OpenBioLLM-70B**, chosen for its superior performance over proprietary alternatives like Med-PaLM 2 and GPT-4 on biomedical benchmarks. Our structured prompt ensures comprehensive coverage: Overview, Causes, Symptoms, Transmission, Diagnosis.
 
 **Generation Parameters**:
 - Temperature: 0.2 (deterministic reproducibility)
@@ -102,15 +98,7 @@ Our LLM-generated descriptions show marked improvements across all validation me
 - **Domain-specific training** provides crucial advantages - PubMedBERT's from-scratch biomedical training shows superior performance
 - **Task-dependent performance** highlights the need for embedding selection based on specific biomedical applications
 
-## 🛠️ Installation & Usage
-
-### Prerequisites
-```bash
-pip install transformers torch numpy pandas scikit-learn nltk pymc3
-pip install sentence-transformers openai python-dotenv
-```
-
-### Repository Structure
+## 📂 Repository Structure
 ```
 ├── data/                 # Raw, processed, and analyzed datasets
 │   ├── 1-extraction/     # Scripts for data extraction
