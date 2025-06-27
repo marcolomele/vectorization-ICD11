@@ -94,6 +94,8 @@ Visualizations of evaluation results are available in `evaluation/visualizations
 * [Leonardo Ruzzante](https://www.linkedin.com/in/leonardo-ruzzante/)
 * [Marco Lomele](https://www.linkedin.com/in/marco-lomele/)
 
+Note: ranking is arbitrary, equal contribution by all.
+
 ## Core Technologies 💻
 
 This project leverages a range of technologies:
