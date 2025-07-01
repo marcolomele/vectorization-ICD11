@@ -213,11 +213,11 @@ Note: ordering is alphabetical on surname; contribution was equal across all tea
 If you use this work in your research, please cite:
 
 ```bibtex
-@article{lomele2024icd11vectorization,
+@article{icd11vectorization2025,
   title={Descriptions are all you need: Semantic Vectorization of Hierarchical Medical Knowledge (ICD-11) via Large Language Models},
   author={Lomele, Marco and Legotkin, Gleb and Koldyshev, Ilia and Caretti, Giorgio and Mantovani, Giovanni and Ruzzante, Leonardo},
   institution={Bocconi University},
-  year={2024}
+  year={2025}
 }
 ```
 
@@ -230,4 +230,4 @@ This project is licensed under the GPL 3.0 License - see the [LICENSE](LICENSE) 
 - **WHO ICD-11 Official**: [https://icd.who.int/](https://icd.who.int/)
 - **Llama3-OpenBioLLM**: [https://huggingface.co/aaditya/Llama3-OpenBioLLM-70B](https://huggingface.co/aaditya/Llama3-OpenBioLLM-70B)
 - **Enhanced Dataset**: Available upon request for research purposes
-- **Evaluation Benchmarks**: Comprehensive test suites for biomedical embeddings
+- **Evaluation Benchmarks**: inspired from ICD2Vec https://www.sciencedirect.com/science/article/pii/S1532046423000825
